@@ -1,31 +1,28 @@
-import React, {Component} from 'react';
-import {View, Text, StyleSheet, ActivityIndicator } from 'react-native';
+import React, { Component } from 'react';
+import { View, StyleSheet, ActivityIndicator} from 'react-native';
+import Card from './components/Container'
 export default class App extends Component {
   render() {
     return (
-      //card style add
-      <View style={styles.card}>
-        <Text style={{color:'blue',fontSize:30 }}>hellow aima progormar my name omar</Text>
-        <Text>omor faruk hellow proggramer</Text>
-          <ActivityIndicator size="large" color="#00ff00" />
-          
-      </View>
+      <View style={[styles.container, styles.horizontal]}>
+      <Card />
+      <ActivityIndicator />
+      <ActivityIndicator size="large" />
+      <ActivityIndicator size="small" color="#0000ff" />
+      <ActivityIndicator size="large" color="#00ff00" />
       
+      </View>
     );
   }
 }
-  const styles = StyleSheet.create({
-    card: {
-    width: 500,
-    borderRadius: 16,
-    marginVertical: 6,
-    backgroundColor:'red',
-    alignItems:"center",
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
   },
-    horizontal: {
+  horizontal: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     padding: 10,
   },
-  });
+});
