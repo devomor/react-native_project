@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ActivityIndicator} from 'react-native';
-import Card from './components/Container'
+import { StyleSheet, View } from 'react-native';
+import Indicator from './components/ActivityinCator';
+import Card from './components/Container';
 export default class App extends Component {
   render() {
     return (
       <View style={[styles.container, styles.horizontal]}>
       <Card />
-      <ActivityIndicator />
-      <ActivityIndicator size="large" />
-      <ActivityIndicator size="small" color="#0000ff" />
-      <ActivityIndicator size="large" color="#00ff00" />
-      
+      <Indicator />
       </View>
     );
   }
@@ -21,7 +18,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   horizontal: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'space-around',
     padding: 10,
   },
