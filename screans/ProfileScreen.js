@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class ProfileScreen extends Component {
-    render() {
-        return (
-            <div>
-                Profile Screen
-            </div>
-        );
-    }
+const ProfileScreen = () => {
+  return (
+    <View>
+      
+    </View>
+  );
 }
 
 export default ProfileScreen;
-

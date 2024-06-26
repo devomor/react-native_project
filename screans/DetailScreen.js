@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Text, View } from 'react-native';
 
-class DetailScreen extends Component {
-    render() {
-        return (
-            <div>
-                Details Screen
-            </div>
-        );
-    }
+const DetailScreen = () => {
+    return (
+      <View>
+        <Text > hwllow</Text>
+      </View>
+    );
 }
 
 export default DetailScreen;
