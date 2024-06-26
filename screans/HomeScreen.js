@@ -1,21 +1,25 @@
 import React from 'react';
-import { Button, Text, View } from 'react-native';
-import DetailScreen from './DetailScreen';
+import { Button, View, ScrollView } from 'react-native';
+import Spacer from '../components/Spacer';
 
 const HomeScreen = ({navigation}) => {
     return (
-        <View>
-            <Text>hello</Text>
-
+        <ScrollView>
          <Button 
             onPress={()=>navigation.navigate('Details')}
             title='go button'
             color='#841584'
-            accessibilityLabel="Learn more about this purple button"
          />
-        </View>
+         <Spacer height={20} />
+           <Button 
+            onPress={()=>navigation.navigate('ActivityIndicator')}
+            title='ActivityIndicator Screen'
+            color='#841584'
+         />
+        </ScrollView>
     );
 }
+
 
 export default HomeScreen;
 

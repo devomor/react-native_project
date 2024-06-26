@@ -1,15 +1,22 @@
 import React from 'react';
-import { ActivityIndicator, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
-const ActivityinCator = () => {
+const ActivityinCator = ({size, color}) => {
     return (
-        <View>
-        <ActivityIndicator />
-        <ActivityIndicator size="large" />
-        <ActivityIndicator size="small" color="#0000ff" />
-        <ActivityIndicator size="large" color="#00ff00" />
+          <View style={styles.container}>
+            <ActivityIndicator size={size} color={color} />
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+});
+
+
 
 export default ActivityinCator;
